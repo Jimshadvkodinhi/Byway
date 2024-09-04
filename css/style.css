@@ -39,7 +39,25 @@ header h1.left a {
     align-items: center;
     color: #64748B;
 }
-
+header .responsive .sidebarhead {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    display: none;
+    left: 0;  
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+header .responsive .sidebarhead .close {
+    width: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
 header nav.right ul { 
     display: flex;
     justify-content: space-between;
@@ -348,9 +366,13 @@ header nav.right ul li a.btn2 {
     display: flex;
     align-items: center;
 }
+#instructors div.students ul li div.bottom span img{
+    padding-bottom: 5px;
+    width: 10px;
+}
 
 #instructors div.students ul li div.bottom span h6 { 
-    font-size: 15px;
+    font-size: 12px;
     margin-left: 10px;
 }
 
@@ -358,9 +380,6 @@ header nav.right ul li a.btn2 {
     font-size: 12px;
     color: #334155;
 }
-
-
-
 #about {
     margin-top: 60px;
     background-color: #F8FAFC;
@@ -624,9 +643,6 @@ footer section.last div.right div.list span.logos small:nth-child(5){
     #spotlight section.container div.img-container {
         margin: 0;
     }
-    #spotlight section.container div.img-container img {
-        width: 400px;
-    }
     #spotlight section.container div.content p br {
         display: none;
     }
@@ -678,7 +694,6 @@ footer section.last div.right div.list span.logos small:nth-child(5){
         align-items: center;
         flex-direction: column;
     }
-
 }
 
 @media all and (max-width: 768px) {
@@ -734,6 +749,23 @@ footer section.last div.right div.list span.logos small:nth-child(5){
         margin-bottom: 15px;
         width: 105px;
     }
+    #instructors div.students ul {
+        overflow: scroll;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #instructors div.students ul li:nth-child(1) {
+        margin-left: 100px;
+    }
+    #instructors div.students ul li {
+        box-shadow: 0 0 2px 2px rgba(107, 106, 106, 0.1);
+        border-radius: 14px;
+        margin-right: 15px;
+        padding: 10px;
+        text-align: center;
+        width: 30%;
+    }
 } 
 
  @media all and (max-width: 640px) {
@@ -780,9 +812,35 @@ footer section.last div.right div.list span.logos small:nth-child(5){
         text-align: center;
         margin-top: 50px;
     }
+    #instructors div.students ul {
+        overflow: scroll;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #instructors div.students ul li:nth-child(1) {
+        margin-left: 230px;
+    }
+    #instructors div.students ul li {
+        box-shadow: 0 0 2px 2px rgba(107, 106, 106, 0.1);
+        border-radius: 14px;
+        margin-right: 15px;
+        padding: 10px;
+        text-align: center;
+        width: 30%;
+    }
 } 
 
  @media all and (max-width: 480px) {
+    #header nav.right{
+        display: none;
+    }
+    #header .left-menu{
+        display: block;
+    }
+    #header .responsive{
+        display: block;
+    }
     #spotlight section.container div.content h1{
         font-size: 32px;
     }
@@ -846,6 +904,17 @@ footer section.last div.right div.list span.logos small:nth-child(5){
         margin: 0 auto;
         width: 83%;
     }
+    #instructors div.students ul li:nth-child(1) {
+        margin-left: 300px;
+    }
+    #instructors div.students ul li div.bottom {
+        display: block;
+    }
+    #instructors div.students ul li div.bottom span {
+        padding-bottom: 5px;
+        width: 50px;
+    } 
+
 } 
 
  @media all and (max-width: 360px) {
@@ -882,7 +951,14 @@ footer section.last div.right div.list span.logos small:nth-child(5){
     }
     #instructors div.items ul li{
         width: 100%;
-    } 
+    }
+    #instructors div.students ul li h3 {
+        font-size: 14px;
+    }
+
+    #instructors div.students ul li h5 {
+        font-size: 14px;
+    }
 } 
 
  @media all and (max-width: 320px) {
@@ -910,4 +986,13 @@ footer section.last div.right div.list span.logos small:nth-child(5){
     footer section.container div.right div.item:last-child {
         margin-right: 0;
     }
+    #spotlight section.container div.img-container {
+        width: 300px;
+    }
+    #instructors div.students ul li div.bottom span {
+        padding-bottom: 10px;
+        width: 50px;
+      }
 } 
+
+
